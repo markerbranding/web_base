@@ -1,0 +1,45 @@
+---
+eleventyComputed:
+    title: "{{ blog[0].titleseo }}"
+    description: "{{ blog[0].descseo }}"
+layout: base.njk
+# gsap: categorias-articulos.js
+pagination:
+  data: collections.articulos
+  size: 20
+  alias: item
+permalink: "/articulos/categorias/"
+---
+
+<div data-barba="container" data-barba-namespace="categorias-articulos" data-css="articulos">
+
+
+    <section id="section__hero" class="pad__all__5">
+        <div class="column__2">
+            <div class="col__left">
+                <h1>Este es el h1</h1>
+            </div>
+            <div class="col__right">
+                <img src="#" alt="Descripción"/>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section__productos" class="pad__all__5">
+        <div class="column__1">
+            <h2>Categorías</h2>
+            <ul role="list" class="listado__x3 width__100">
+                {%- for item in pagination.items -%}
+                    
+                    {% for catSlug in item.categoriesSlug %}
+                        <a href="{{ catSlug.current }}">{{ catSlug.current }}</a>
+                    {% endfor %}
+                {%- endfor %}
+            </ul>
+        </div>
+    </section>
+
+
+</div>
+

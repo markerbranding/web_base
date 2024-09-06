@@ -1,0 +1,32 @@
+---
+eleventyComputed:
+    title: "{{ categoriasPosts[0].titleseo }}"
+    description: "{{ categoriasPosts[0].descseo }}"
+layout: base.njk
+pagination:
+  data: collections.categorias-blog
+  size: 1
+  alias: categoria
+permalink: "/articulos/categorias/{{ categoria.slug.current }}/"
+---
+
+<div data-barba="container" data-barba-namespace="categoria-articulo" data-css="articulos">
+  <section>
+    <div class="column__1">
+      <h1>{{ categoria.title }}</h1>
+    </div>
+  </section>
+
+  <section id="section__articulos" class="pad__all__5">
+    <div class="column__1">
+    
+    <p>{{ categoria.slug.current }}</p>
+    <ul role="list" class="listado__x3 width__100">
+      {%- for item in categoria.post %}
+        {% include "categoria-post-card.njk" %}
+      {%- endfor %}
+    </ul>
+    </div>
+  </section>
+</div>
+

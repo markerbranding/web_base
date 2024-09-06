@@ -1,0 +1,20 @@
+---
+eleventyComputed:
+    title: "{{ aviso[0].titleseo }}"
+    description: "{{ aviso[0].descseo }}"
+layout: "base.njk"
+permalink: "/{{ page.fileSlug }}/"
+---
+
+<div data-barba="container" data-barba-namespace="aviso" data-css="aviso">
+{% for item in aviso %}
+
+    <section id="section__aviso" class="pad__all__5">
+        <div class="column__1 max1200">
+            <h1>{{ item.heroH1 }}</h1>
+            <div>{{ item.avisoText | safe }}</div>
+        </div>
+    </section>
+    
+{% endfor %}
+</div>

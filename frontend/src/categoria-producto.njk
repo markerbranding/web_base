@@ -1,0 +1,34 @@
+---
+eleventyComputed:
+    title: "{{ categoriasProductos[0].titleseo }}"
+    description: "{{ categoriasProductos[0].descseo }}"
+layout: base.njk
+pagination:
+  data: collections.categorias
+  size: 1
+  alias: categoria
+permalink: "/productos/categorias/{{ categoria.slug.current }}/"
+---
+
+<div data-barba="container" data-barba-namespace="categoria-producto" data-css="productos">
+
+  <section>
+    <div class="column__1">
+      <h1>{{ categoria.title }}</h1>
+    </div>
+  </section>
+
+  <section id="section__productos" class="pad__all__5">
+    <div class="column__1">
+    
+    <p>{{ categoria.slug.current }}</p>
+    <ul role="list" class="listado__x3 width__100">
+      {%- for item in categoria.products %}
+        {% include "categoria-producto-card.njk" %}
+      {%- endfor %}
+    </ul>
+    </div>
+  </section>
+
+</div>
+
