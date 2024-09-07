@@ -16,3 +16,45 @@
         font-size: 1.4vw;
     }
 }
+
+form{
+    width: 100%;
+    padding: 5%;
+}
+
+form > div:nth-child(5){
+    grid-column: 2 span;
+
+}
+
+label{
+    margin-bottom: 5px;
+    font-size: var(--size-sm);
+}
+
+input{
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: var(--size-sm);
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #fff;
+}
+
+textarea{
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--color-accent);
+}
+
+form button{
+    grid-column: 2 span;
+    margin: 0 auto;
+}

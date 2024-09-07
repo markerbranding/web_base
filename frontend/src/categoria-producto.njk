@@ -4,7 +4,7 @@ eleventyComputed:
     description: "{{ categoriasProductos[0].descseo }}"
 layout: base.njk
 pagination:
-  data: collections.categorias
+  data: collections.uniqueCategories
   size: 1
   alias: categoria
 permalink: "/productos/categorias/{{ categoria.slug.current }}/"
@@ -22,9 +22,9 @@ permalink: "/productos/categorias/{{ categoria.slug.current }}/"
     <div class="column__1">
     
     <p>{{ categoria.slug.current }}</p>
-    <ul role="list" class="listado__x3 width__100">
+    <ul role="list" class="listado__x3 width__100 hide__category">
       {%- for item in categoria.products %}
-        {% include "categoria-producto-card.njk" %}
+        {% include "producto-card.njk" %}
       {%- endfor %}
     </ul>
     </div>

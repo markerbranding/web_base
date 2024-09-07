@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Colección categorías:
-  eleventyConfig.addCollection("categorias-blog", async function(collectionApi) {
+  eleventyConfig.addCollection("categoriasBlog", async function(collectionApi) {
     const categoriasPostsModule = require('./src/_data/categoriasPosts.js');
     const categoriasPosts = await categoriasPostsModule();
     return categoriasPosts;
@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
 
 
 
-  
+
 
   // Filtro para crear un srcset de imágenes
   eleventyConfig.addNunjucksFilter("srcset", function(images) {

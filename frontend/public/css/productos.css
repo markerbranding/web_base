@@ -24,3 +24,7 @@
         font-size: var(--size-md);
     }
 }
+
+.hide__category .card__category{
+    display: none;
+}

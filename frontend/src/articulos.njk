@@ -3,7 +3,6 @@ eleventyComputed:
     title: "{{ blog[0].titleseo }}"
     description: "{{ blog[0].descseo }}"
 layout: base.njk
-# gsap: articulos.js
 pagination:
   data: collections.articulos
   size: 20
@@ -37,7 +36,7 @@ permalink: "/articulos/{{pagination.pageNumber + 1}}/"
   {% endfor %}
 
 
-  <section id="section__productos" class="pad__all__5">
+  <section id="section__intro" class="pad__all__5">
       <div class="column__1">
           <ul role="list" class="listado__x3 width__100">
               {%- for item in pagination.items -%}

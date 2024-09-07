@@ -3,38 +3,25 @@ eleventyComputed:
     title: "{{ productos[0].titleseo }}"
     description: "{{ productos[0].descseo }}"
 layout: base.njk
-# gsap: categorias-productos.js
-pagination:
-  data: collections.productos
-  size: 20
-  alias: item
-permalink: "/productos/categorias/" # Para cuando se desea paginación amplia: permalink: "/productos/{{pagination.pageNumber + 1}}/"
+
+permalink: "/productos/categorias/index.html"
 ---
 
 <div data-barba="container" data-barba-namespace="categorias-productos" data-css="productos">
 
 
     <section id="section__hero" class="pad__all__5">
-        <div class="column__2">
-            <div class="col__left">
-                <h1>Este es el h1</h1>
-            </div>
-            <div class="col__right">
-                <img src="#" alt="Descripción"/>
-            </div>
+        <div class="column__1">
+            <h1>Categorías de productos</h1>
         </div>
     </section>
 
 
     <section id="section__productos" class="pad__all__5">
         <div class="column__1">
-            <h2>Categorías</h2>
             <ul role="list" class="listado__x3 width__100">
-                {%- for item in pagination.items -%}
-                    
-                    {% for catSlug in item.categoriesSlug %}
-                        <a href="{{ catSlug.current }}">{{ catSlug.current }}</a>
-                    {% endfor %}
+                {%- for categoria in collections.categorias -%}
+                    <a href="/productos/categorias/{{ categoria.slug.current }}">{{ categoria.title }}</a>
                 {%- endfor %}
             </ul>
         </div>

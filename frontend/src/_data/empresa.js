@@ -1,6 +1,4 @@
 const client = require('../utils/sanityClient');
-const processPortableText = require('../utils/portableText');
-const processImages = require('../utils/imageProcessor');
 
 module.exports = async function() {
   const data = await client.fetch(`*[_type == "empresa"]{

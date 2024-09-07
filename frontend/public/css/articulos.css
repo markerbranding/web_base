@@ -25,6 +25,10 @@
     }
 }
 
+.hide__category .card__category{
+    display: none;
+}
+
 .paginacion{
     width: 100%;
     display: flex;
