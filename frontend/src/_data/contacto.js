@@ -5,6 +5,7 @@ module.exports = async function() {
   const data = await client.fetch(`*[_type == "contact"]{
     titleseo,
     descseo,
+    keyseo,
     heroH1,
     heroH2,
     heroP,
@@ -13,6 +14,9 @@ module.exports = async function() {
       "media": asset->{url},
       "alt": asset->{altText}
     },
+    introH3,
+    introH2,
+    introRichText,
   }`);
 
   await Promise.all(data.map(processContent)); // Procesa todo el contenido en cada objeto

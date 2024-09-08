@@ -437,6 +437,19 @@ section{
     margin-bottom: 4%;
 }
 
+#section__gracias{
+    h1{
+        font-size: var(--size-2xl);
+        color: var(--color-primary);
+    }
+    h2{
+        font-size: var(--size-md);
+        color: var(--color-secondary);
+        line-height: 1.4;
+        font-weight: 400;
+    }
+}
+
 
 
 
@@ -532,7 +545,8 @@ section{
 
     .listado__x2, .listado__x3, .listado__x4, .listado__x5, .listado__x6{
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
+        column-gap: 0px;
+        row-gap: 30px;
     }
 
 

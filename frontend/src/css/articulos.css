@@ -21,7 +21,7 @@
     }
     p{
         color: var(--color-white);
-        font-size: 1.4vw;
+        font-size: var(--size-md);
     }
 }
 

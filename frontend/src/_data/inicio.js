@@ -5,6 +5,7 @@ module.exports = async function() {
   const data = await client.fetch(`*[_type == "inicio"]{
     titleseo,
     descseo,
+    keyseo,
     heroH1,
     heroH2[]{
       ...,

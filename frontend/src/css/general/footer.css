@@ -98,3 +98,46 @@ footer{
 #inner__footer a:hover{
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+/*  Tableta  */
+@media only screen and (max-width: 1024px) {
+
+    footer{
+        background-color: var(--color-secondary);
+        padding: 10% 5% 50px;
+    }
+
+    footer .column__1{
+        row-gap: 80px;
+        column-gap: 50px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*  Móvil  */
+@media only screen and (max-width: 768px) {
+
+    footer{
+        background-color: var(--color-secondary);
+        padding: 10% 5% 20px;
+    }
+
+    footer .column__1{
+        gap: 50px;
+    }
+
+}

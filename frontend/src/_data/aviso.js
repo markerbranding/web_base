@@ -3,8 +3,6 @@ const processContent = require('../utils/contentProcessor');
 
 module.exports = async function() {
   const data = await client.fetch(`*[_type == "aviso"]{
-    titleseo,
-    descseo,
     heroH1,
     slug,
     avisoText,

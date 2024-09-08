@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ empresa[0].brandName }} | {{ title }}</title>
     <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="{{ empresa[0].brandName }}">
+    {% if robots %}<meta name=”robots” content="{{ robots }}">{% endif %}
+    <meta property=”og:type” content="website" />
+    <meta property=”og:title” content="{{ title }}" />
+    <meta property=”og:description” content="{{ description }}" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/general/reset.css">

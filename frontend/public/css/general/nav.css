@@ -14,6 +14,8 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 100;
 }
 
 #logo__main img{
@@ -171,10 +173,10 @@ header{
     top: 0;
     right: 0;
     width: 30vw;
-    min-width: 200px;
+    min-width: 250px;
     height: 100dvh;
     background-color: var(--color-secondary);
-    transform: translateX(50vw);
+    transform: translateX(100vw);
     z-index: 99;
     transition: transform 0.3s ease-in-out;
 }
@@ -186,6 +188,7 @@ header{
 #mobile__active{
     display: none;
     position: fixed;
+    z-index: 98;
     background-color: var(--color-black);
     top: 0;
     left: 0;
@@ -263,5 +266,9 @@ header{
 
     #mobile__menu{
         display: flex;
+    }
+    #mobile__menu .cta__msn{
+        margin-top: 20px;
+        margin-left: 20px;
     }
   }

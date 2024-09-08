@@ -6,6 +6,7 @@ module.exports = async function() {
   const data = await client.fetch(`*[_type == "post-category"]{
     titleseo,
     descseo,
+    keyseo,
     title,
     slug,
     "posts": *[_type == "post" && references(^._id)]{

@@ -5,6 +5,7 @@ module.exports = async function() {
   const data = await client.fetch(`*[_type == "post"]{
     titleseo,
     descseo,
+    keyseo,
     title,
     slug,
     publishedAt,

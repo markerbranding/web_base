@@ -5,6 +5,7 @@ module.exports = async function() {
   const data = await client.fetch(`*[_type == "blog"]{
     titleseo,
     descseo,
+    keyseo,
     heroH1,
     heroH2,
     heroP,

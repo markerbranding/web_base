@@ -2,6 +2,7 @@
 eleventyComputed:
     title: "{{ nosotros[0].titleseo }}"
     description: "{{ nosotros[0].descseo }}"
+    keywords: "{{ nosotros[0].keyseo }}"
 layout: "base.njk"
 permalink: "/{{ page.fileSlug }}/"
 ---
@@ -31,7 +32,7 @@ permalink: "/{{ page.fileSlug }}/"
     </section>
 
 
-    <section id="section__intro" class="pad__all__5">
+    <section id="section__intro" class="pad__all__5 fadeInOut">
         <div class="column__2">
             <div class="col__left width__40">
                 <h3>{{ item.introH3 }}</h3>
@@ -39,7 +40,6 @@ permalink: "/{{ page.fileSlug }}/"
             </div>
             <div class="col__right width__60">
                 <div>{{ item.introRichText | safe }}</div>
-                <a class="btn btn__hero">{{ item.introBtn }}</a>
                 <div class="column__2 mar__top__5">
                     <div class="col__left flex__justify__sb width__30">
                         {% if item.introImg2 %}
@@ -63,18 +63,6 @@ permalink: "/{{ page.fileSlug }}/"
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-
-    <section id="section__productos" class="pad__all__5">
-        <div class="column__1">
-            <h2>Productos destacados</h2>
-            <ul role="list" class="listado__x3 width__100">
-                {% for item in item.recentProdRef.recentProducts %}
-                    {% include "producto-card.njk" %}
-                {% endfor %}
-            </ul>
         </div>
     </section>
 
